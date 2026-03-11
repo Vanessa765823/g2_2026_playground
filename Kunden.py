@@ -1,5 +1,4 @@
 class Kunde:
-    
     def __init__(self, kunden_id, vorname, nachname, email, telefon, adresse):
         self.kunden_id = kunden_id
         self.vorname = vorname
@@ -19,3 +18,6 @@ class Kunde:
 
     def deaktivieren(self):
         self.aktiv = False
+
+
+# blqh
