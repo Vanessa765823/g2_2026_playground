@@ -1,10 +1,10 @@
 from Autor import Autore
 
 class Buch:
-    def __init__(self, titel, autor , erscheinungsjahr, isbn, seitenanzahl):
+    def __init__(self, titel, autor: Autore.voller_name , erscheinungsjahr, isbn, seitenanzahl):
         """Initialisiert ein neues Buch-Objekt."""
         self.titel = titel
-        self.autor = Autore.voller_name
+        self.autor = autor
         self.erscheinungsjahr = erscheinungsjahr
         self.isbn = isbn
         self.seitenanzahl = seitenanzahl
