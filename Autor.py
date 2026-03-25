@@ -118,6 +118,7 @@ class Autore:
         """Gibt den Vor- und Nachnamen als einen String zurück."""
         return f"{self._vorname} {self._nachname}"
 
+
 # 📚 **Beispiel: 5 Autoren instanziieren**
 print("=" * 50)
 print("BEISPIEL 1: 5 AUTOREN INSTANZIIEREN")
@@ -166,17 +167,3 @@ print("\n4. AUTOREN MIT GENRE 'ROMAN':")
 roman_autoren = [a for a in autoren_liste if a.lieblingsgenre == "Roman"]
 for autor in roman_autoren:
     print(f"  - {autor.vollstaendiger_name()} ({autor.lieblingsgenre})")
-
-# 5. Statistik nach Nationalität
-print("\n5. STATISTIK NACH NATIONALITÄT:")
-nationalitaeten = {}
-for autor in autoren_liste:
-    nat = autor.nationalitaet
-    if nat not in nationalitaeten:
-        nationalitaeten[nat] = {"anzahl": 0, "buecher_summe": 0}
-    nationalitaeten[nat]["anzahl"] += 1
-    nationalitaeten[nat]["buecher_summe"] += autor.anzahl_buecher
-
-for nat, stats in nationalitaeten.items():
-    durchschnitt = stats["buecher_summe"] / stats["anzahl"]
-    print(f"  {nat}: {stats['anzahl']} Autoren, Ø {durchschnitt:.1f} Bücher")
